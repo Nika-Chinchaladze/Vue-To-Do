@@ -6,9 +6,9 @@
         <li v-for="book in books" :key="book._id" class="list-item">
           <img :src="book.image" alt="img"></img>
           <div class="text-div">
-            <p><b>Title:</b> {{ book.title }}</p>
-            <p><b>Author:</b> {{ book.author }}</p>
-            <p><b>Price:</b> ${{ book.price }}</p>
+            <p><b>Title:</b> <span class="p-title">{{ book.title }}</span></p>
+            <p><b>Author:</b> <span class="p-author">{{ book.author }}</span></p>
+            <p><b>Price:</b> $<span class="p-price">{{ book.price }}</span></p>
           </div>
           <div class='button-space'>
             <button class="edit-btn" @click="$emit('edit', book)">Edit</button>
