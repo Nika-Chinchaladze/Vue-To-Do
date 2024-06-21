@@ -2,12 +2,12 @@
   <div>
     <h1 data-cy="main-title" id="app-title">Basic CRUD App With Vue Js</h1>
     <form data-cy="form" id="form-element" @submit.prevent="handleSubmit">
-      <input v-model="bookCopy.title" placeholder="Title" required />
-      <input v-model="bookCopy.author" placeholder="Author" required />
-      <input v-model="bookCopy.image" placeholder="Image link" required />
-      <input v-model.number="bookCopy.price" type="number" placeholder="Price" required />
+      <input v-model="bookCopy.title" placeholder="Title" data-cy="title-input" required />
+      <input v-model="bookCopy.author" placeholder="Author" data-cy="author-input" required />
+      <input v-model="bookCopy.image" placeholder="Image link" data-cy="image-input" required />
+      <input v-model.number="bookCopy.price" type="number" placeholder="Price" data-cy="price-input" required />
       <div id="form-btn-div">
-        <button id="add-update-btn" type="submit">{{ isEditing ? 'Update' : 'Add' }}</button>
+        <button id="add-update-btn" type="submit" data-cy="submit-btn">{{ isEditing ? 'Update' : 'Add' }}</button>
         <button id="cancel-btn" type="button" @click="resetForm">Cancel</button>
       </div>
     </form>
