@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h1 id="app-title">Basic CRUD App With Vue Js</h1>
-    <form id="form-element" @submit.prevent="handleSubmit">
+    <h1 data-cy="main-title" id="app-title">Basic CRUD App With Vue Js</h1>
+    <form data-cy="form" id="form-element" @submit.prevent="handleSubmit">
       <input v-model="bookCopy.title" placeholder="Title" required />
       <input v-model="bookCopy.author" placeholder="Author" required />
       <input v-model="bookCopy.image" placeholder="Image link" required />

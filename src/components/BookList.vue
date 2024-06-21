@@ -1,7 +1,8 @@
 <template>
     <div>
-      <h2 id="content-title">Available Books</h2>
-      <ul id="main-content">
+      <h2 data-cy="content-title" id="content-title">Available Books</h2>
+
+      <ul v-if="books.length" data-cy="book-content" id="main-content">
         <li v-for="book in books" :key="book._id" class="list-item">
           <img :src="book.image" alt="img"></img>
           <div class="text-div">
@@ -15,6 +16,8 @@
           </div>
         </li>
       </ul>
+
+      <p v-else data-cy="no-books" id="no-books">No books available</p>
     </div>
   </template>
   
@@ -38,6 +41,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+#no-books {
+  text-align: center;
 }
 .list-item {
   width: 60%;
